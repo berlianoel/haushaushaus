@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,23 +12,32 @@ body {
 .main-container {
   width: 90%;
   max-width: 1200px;
+  padding: 20px;
   text-align: center;
 }
 
 .welcome-title {
-  font-size: 24px;
-  color: #333;
+  font-size: 36px;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .profile-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -41,29 +50,31 @@ body {
 }
 
 .banner-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 100px;
+  background-color: #e0e0e0;
 }
 
-.profile-img {
+.profile-info {
+  padding: 15px;
+}
+
+.profile-pic {
   width: 80px;
   height: 80px;
+  background-color: #ccc;
   border-radius: 50%;
   margin-top: -40px;
+  margin-bottom: 10px;
   border: 3px solid #fff;
+  display: inline-block;
 }
 
-.about-section {
-  padding: 10px;
-}
-
-.about-section h2 {
-  font-size: 18px;
+.profile-info h2 {
+  font-size: 22px;
   margin: 10px 0;
 }
 
-.about-section p {
+.profile-info p {
   font-size: 14px;
   color: #666;
 }
@@ -85,6 +96,6 @@ body {
 /* Footer Styles */
 footer {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
   color: #888;
 }
